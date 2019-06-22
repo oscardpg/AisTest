@@ -4,11 +4,12 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import es.codeurjc.ais.tictactoe.*;
 
-
+@DisplayName("Pruebas unitarias de la clase Board")
 public class BoardTest{
 	
 	protected static TicTacToeGame partida;
@@ -37,6 +38,7 @@ public class BoardTest{
 /*Test********************************************************************/		
 /*CheckDraw*****************************************************/	
 	@Test
+	@DisplayName("Pruebas CheckDrawJugador1")
 	void testCheckDrawJugador1(){
 		//Probamos CheckDraw() cuando gana el jugador 1
 		marcarFichasTablero(1);
@@ -48,6 +50,7 @@ public class BoardTest{
 	}
 	
 	@Test
+	@DisplayName("Pruebas CheckDrawJugador2")
 	void testCheckDrawJugador2(){
 		//Probamos CheckDraw() cuando gana el jugador 2
 		marcarFichasTablero(2);
@@ -59,6 +62,7 @@ public class BoardTest{
 	}
 	
 	@Test
+	@DisplayName("Pruebas CheckDrawEmpate")
 	void testCheckDrawEmpate(){
 		//Probamos CheckDraw() cuando empatan
 		marcarFichasTablero(0);
@@ -70,7 +74,9 @@ public class BoardTest{
 	}
 
 /*GetCellsIfWinner***********************************************************/
+	
 	@Test
+	@DisplayName("Pruebas GetCellsIfWinnerJugador1")
 	void testGetCellsIfWinnerJugador1(){
 		//Probamos GetCellsIfWinner() cuando gana el jugador 1
 		marcarFichasTablero(1);
@@ -83,6 +89,7 @@ public class BoardTest{
 	}
 	
 	@Test
+	@DisplayName("Pruebas GetCellsIfWinnerJugador2")
 	void testGetCellsIfWinnerJugador2(){
 		//Probamos GetCellsIfWinner() cuando gana el jugador 2
 		marcarFichasTablero(2);
@@ -95,6 +102,7 @@ public class BoardTest{
 	}
 	
 	@Test
+	@DisplayName("Pruebas GetCellsIfWinnerEmpate")
 	void testGetCellsIfWinnerEmpate(){
 		//Probamos GetCellsIfWinner() cuando empatan
 		marcarFichasTablero(0);

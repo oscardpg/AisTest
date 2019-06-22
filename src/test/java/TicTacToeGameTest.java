@@ -12,12 +12,15 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
+
 import es.codeurjc.ais.tictactoe.TicTacToeGame.WinnerValue;
 import org.junit.jupiter.api.Test;
 import org.mockito.ArgumentCaptor;
 
 import es.codeurjc.ais.tictactoe.*;
 
+@DisplayName("Pruebas de dobles de la clase TicTacToeGame")
 public class TicTacToeGameTest{
 	
 	private static TicTacToeGame partida;
@@ -67,6 +70,7 @@ public class TicTacToeGameTest{
 /*Test*******************************************************/		
 	
 	@Test
+	@DisplayName("Prueba de conexion")
 	void testConnection(){	
 		System.out.println("Probamos la conexion de los jugadores");		
 		System.out.println("\tProbamos la conexion 1");
@@ -104,6 +108,7 @@ public class TicTacToeGameTest{
 	}
 	
 	@Test
+	@DisplayName("Prueba de CheckTurn")
 	void checkTurn(){
 		System.out.println("Probamos el CheckTurn");
 		
@@ -143,6 +148,7 @@ public class TicTacToeGameTest{
 	}
 	
 	@Test
+	@DisplayName("Prueba de Mark")
 	void testMark(){
 		
 		System.out.println("Probamos el Mark");
@@ -170,6 +176,7 @@ public class TicTacToeGameTest{
 	}
 	
 	@Test
+	@DisplayName("Prueba de CheckWinnerMessage")
 	void testCheckWinnerMessage(){
 		System.out.println("Probamos CheckWinnerMessage");
 		BoardTest.marcarFichasTablero(1);
@@ -191,6 +198,7 @@ public class TicTacToeGameTest{
 	
 	
 	@Test
+	@DisplayName("Prueba de CheckDrawMessage")
 	void testCheckDrawMessage(){
 		System.out.println("Empezando prueba del empate");
 		BoardTest.marcarFichasTablero(0);
@@ -210,6 +218,7 @@ public class TicTacToeGameTest{
 	}
 	
 	@Test
+	@DisplayName("Prueba de CheckLoserMessage")
 	void testCheckLoserMessage(){
 		System.out.println("Empezando prueba de la derrota");
 		BoardTest.marcarFichasTablero(2);
